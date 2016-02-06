@@ -1,8 +1,8 @@
 package com.example.publicfinalsdevs.firstaid;
 
 /**
- * LAST UPDATE OF RULES: 28/01/2016 BY: HORACIO
- *
+ ** LAST UPDATE OF RULES: 28/01/2016 BY: HORACIO
+ **
  * NOTES:
  *      <NOTES FOR THE NEXT AUTHOR WHO WILL UPDATE HIS FILE GOES HERE>
  *
@@ -22,7 +22,7 @@ package com.example.publicfinalsdevs.firstaid;
  *
  *
  *
- */
+ **/
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //test
 
 
     }
