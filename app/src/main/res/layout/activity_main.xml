@@ -19,8 +19,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:background="@color/green">
-            <!--@drawable/map_background-->
+            android:background="@drawable/map_background">
 
             <TextView
                 android:layout_width="match_parent"
@@ -37,9 +36,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/green"
+            android:background="@drawable/emergency_background"
             android:orientation="horizontal">
-            <!--android:background = @drawable/emergency_background-->
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

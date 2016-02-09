@@ -22,26 +22,22 @@ package com.example.publicfinalsdevs.firstaid;
  **/
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import database.SQLHelper;
+
+import database.FirstAidSQLHelper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private SQLHelper mDatabase;
+    private FirstAidSQLHelper mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mDatabase = new FirstAidSQLHelper(this);
+
         setContentView(R.layout.activity_main);
-        mDatabase = new SQLHelper(this);
-        if(mDatabase.isUserInfo()) {
-            System.out.println("algo");
-        }else {
-            startActivity(new Intent(MainActivity.this, StartUp.class));
-            finish();
-        }
 
 
     }

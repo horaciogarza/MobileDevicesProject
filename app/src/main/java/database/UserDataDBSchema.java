@@ -24,18 +24,6 @@ public class UserDataDBSchema {
             public static final String HOME_PHONE = "homePhone";
             public static final String MARITAL_STATUS = "maritalStatus";
 
-            public static final String[] COL = {"name", "address", "bloodType", "city", "age", "email", "zipCode", "mobile", "homePhone", "martialStatus"};
-
-            public static String getCreateQueryCols(){
-                String query ="";
-                for (int i=0;i<COL.length;i++){
-                    query = query + COL[i] + " text ";
-                    if(i<COL.length-1)
-                        query = query+",";
-                }
-                return query;
-            }
-
         }
 
 
