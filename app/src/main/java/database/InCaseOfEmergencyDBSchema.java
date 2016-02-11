@@ -20,6 +20,19 @@ public class InCaseOfEmergencyDBSchema {
             public static final String CONTACT_MOBILE = "mobile";
             public static final String CONTACT_PHONE = "phone";
 
+            public static final String[] COL = {"name", "relationship", "mobile", "phone"}; 
+28 
+ 
+29             public static String getCreateQueryCols(){ 
+30                 String query =""; 
+31                 for (int i=0;i<COL.length;i++){ 
+32                     query = query + COL[i] + " text "; 
+33                     if(i<COL.length-1) 
+34                         query = query+","; 
+35                 } 
+36                 return query; 
+37             } 
+
         }
     }
 }
