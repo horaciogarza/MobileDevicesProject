@@ -20,11 +20,12 @@ public class SQLHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        /*db.execSQL("create table "+UserDataDBSchema.UserDataTable.NAME+" ("+UserDataDBSchema.UserDataTable.Cols.COL[1]+" text, "+
-                                                                            UserDataDBSchema.UserDataTable.Cols.COL[2]+" text, "+
-                                                                            UserDataDBSchema.UserDataTable.Cols.COL[3]+" text, "+
-                                                                            UserDataDBSchema.UserDataTable.Cols.COL[4]);*/
-        db.execSQL("create table if not exists " + UserDataDBSchema.UserDataTable.NAME + " (" + UserDataDBSchema.UserDataTable.Cols.getCreateQueryCols() + ")");
+        
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + UserDataDBSchema.UserDataTable.NAME + " (" + UserDataDBSchema.UserDataTable.Cols.getCreateQueryCols() + ")");
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + EmergencyPhoneNumDBSchema.EmergencyPhoneNumTable.NAME + " (" + EmergencyPhoneNumDBSchema.EmergencyPhoneNumTable.Cols.getCreateQueryCols() + ")");
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + MedicalDataDBSchema.MedicalDataTable.NAME + " (" + MedicalDataDBSchema.MedicalDataTable.Cols.getCreateQueryCols() + ")");
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + InCaseOfEmergencyDBSchema.InCaseOfEmergencyTable.NAME + " (" + InCaseOfEmergencyDBSchema.InCaseOfEmergencyTable.Cols.getCreateQueryCols() + ")");
+        
     }
 
     @Override
