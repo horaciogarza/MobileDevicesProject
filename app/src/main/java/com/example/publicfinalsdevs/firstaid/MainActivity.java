@@ -36,15 +36,18 @@ public class MainActivity extends AppCompatActivity {
     /**
      * <b>onCreate</b> method creates the main activity but it will check if a database exists, if not it will launch StartUp.java activity
      * which is going to recollect all the necessary info
+     *
      */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mDatabase = new SQLHelper(this);
-        if (mDatabase.isUserInfo()) {
+
+
+        if(mDatabase.isUserInfo()) {
             Log.i("Database Status", "Database  exists");
-        } else {
+        }else {
             startActivity(new Intent(MainActivity.this, StartUp.class));
             finish();
 

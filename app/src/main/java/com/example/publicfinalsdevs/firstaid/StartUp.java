@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import database.SQLHelper;
-import database.UserDataDBSchema;
+import database.PersonalInfoDBSchema;
 
 /**
  * Created by diego on 08/02/2016.
@@ -76,7 +76,7 @@ public class StartUp extends AppCompatActivity{
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        boolean result = mDataBase.insertData(UserDataDBSchema.UserDataTable.NAME, new String[] {editName.getText().toString(),
+                        boolean result = mDataBase.insertData(PersonalInfoDBSchema.UserDataTable.NAME, new String[] {editName.getText().toString(),
                                 editAddress.getText().toString(), spinnerTypeBlood.getSelectedItem().toString(), editCity.getText().toString(),
                                 spinnerAge.getSelectedItem().toString(), editEmail.getText().toString(), editZipCode.getText().toString(), editMoblie.getText().toString(),
                                 editHomePhone.getText().toString(), editMartial.getText().toString()});
