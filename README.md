@@ -17,7 +17,7 @@ First Aid is an Android Application for mobile devices with an Android API 21+, 
   <h4>Developers:</h4>
   
   <ul>
-    <li><a href="http://www.twitter.com/horaciogarza">Horacio Garza</a></li>
+    <li><a href="http://www.twitter.com/horaciogza">Horacio Garza</a></li>
     <li>Omar Gerardo</li>
     <li>Diego Gonzalez</li>
     <li>Julian</li>
