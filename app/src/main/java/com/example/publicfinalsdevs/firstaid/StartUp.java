@@ -81,11 +81,11 @@ public class StartUp extends AppCompatActivity{
                                 spinnerAge.getSelectedItem().toString(), editEmail.getText().toString(), editZipCode.getText().toString(), editMoblie.getText().toString(),
                                 editHomePhone.getText().toString(), editMartial.getText().toString()});
                         if(result == true){
-                            Toast.makeText(StartUp.this, "Data Inserted", Toast.LENGTH_LONG).show();
+                            Toast.makeText(StartUp.this, "Thank you!", Toast.LENGTH_LONG).show();
                             startActivity(new Intent(StartUp.this, MainActivity.class));
                             finish();
                         }else{
-                            Toast.makeText(StartUp.this, "Data NOT Inserted", Toast.LENGTH_LONG).show();
+                            Toast.makeText(StartUp.this, "empty", Toast.LENGTH_LONG).show();
                         }
                     }
                 }
