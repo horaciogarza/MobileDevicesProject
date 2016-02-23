@@ -23,7 +23,7 @@ First Aid is an Android Application for mobile devices with an Android API 21+, 
     <li>Julian</li>
   </ul> 
    
-  All from <a href="http://www.fime.uanl.mx"><i>Facultad de Ingenieria Mecanica y Electrica</i></a>, <a href="http://www.uanl.mx"><i>Universidad Autonoma de Nuevo Leon</i></a>
+  All from <a href="http://www.fime.uanl.mx"><i>Facultad de Ingenieria Mecanica y Electrica</i></a>, <a href="http://www.uanl.mx"><i>Universidad Autonoma de Nuevo Leon.</i></a>
    
    <h4>Development Tools:</h4>
   

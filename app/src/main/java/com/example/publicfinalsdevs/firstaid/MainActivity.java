@@ -44,14 +44,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mDatabase = new SQLHelper(this);
 
+        startActivity(new Intent(MainActivity.this, MapsActivity.class));
 
-        if(mDatabase.isUserInfo()) {
-            Log.i("Database Status", "Database  exists");
-        }else {
-            startActivity(new Intent(MainActivity.this, StartUp.class));
-            finish();
-
-        }
+//        if(mDatabase.isUserInfo()) {
+//            Log.i("Database Status", "Database  exists");
+//        }else {
+//            startActivity(new Intent(MainActivity.this, StartUp.class));
+//            finish();
+//
+//        }
 
 
     }
