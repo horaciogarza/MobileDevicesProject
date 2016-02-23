@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.publicfinalsdevs.firstaid">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -10,6 +11,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+                   android:value="AIzaSyDA0t0Q6BplXBJ2VerPcNp3gTWlS1csjcY"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +27,11 @@
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".MapsActivity"
+                  android:label="Hospitales"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Map"
+                  />
     </application>
 
 </manifest>
