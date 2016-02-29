@@ -56,15 +56,7 @@ public class StartUp extends AppCompatActivity{
         spinnerTypeBlood = (Spinner)findViewById(R.id.spinner2);
 
         //Items on Spinner TypeBlood
-        List<String> typeBlood = new ArrayList<String>();
-        typeBlood.add("AB+");typeBlood.add("AB-");
-        typeBlood.add("A+");typeBlood.add("A-");
-        typeBlood.add("B+");typeBlood.add("B-");
-        typeBlood.add("O+");typeBlood.add("O-");
 
-        ArrayAdapter<String> adapterTypeBlood = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,typeBlood);
-        adapterTypeBlood.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerTypeBlood.setAdapter(adapterTypeBlood);
 
         btnSend = (Button) findViewById(R.id.button);
         addData();

@@ -17,4 +17,6 @@
     <string name="homePhoneField">Local Phone</string>
     <string name="emailField">Email</string>
     <string name="mobileField">Mobile</string>
+    <string name="i_have_finished">I\'m ready</string>
+    <string name="marital_status_single">Single</string>
 </resources>

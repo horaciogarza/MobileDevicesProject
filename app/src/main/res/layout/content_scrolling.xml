@@ -11,7 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
 
         <!--Form-->
         <com.rey.material.widget.EditText
@@ -19,128 +20,195 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:inputType="textMultiLine"
             android:hint="@string/nameField"
-            app:et_inputId="@+id/textfield_et_char_counter_input"
-            app:et_supportMode="charCounter"
-            app:et_supportMaxChars="20"
+            android:inputType="textMultiLine"
             app:et_dividerColor="#000000"
-            />
+            app:et_inputId="@+id/textfield_et_char_counter_input"
+            app:et_supportMaxChars="20"
+            app:et_supportMode="charCounter" />
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.rey.material.widget.RadioButton
+                    android:id="@+id/radioMale"
+                    style="@style/Material.Drawable.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/radio_male"
+                    app:rbd_animDuration="2" />
+
+                <com.rey.material.widget.RadioButton
+                    android:id="@+id/radioFemale"
+                    style="@style/Material.Drawable.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="@string/radio_female"
+                    app:rbd_animDuration="2" />
+
+            </LinearLayout>
+
+
+        </RadioGroup>
+
+
+        <!--http://www.mkyong.com/android/android-radio-buttons-example/-->
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="10">
+            android:weightSum="100">
 
-            <TextView
-                android:layout_width="wrap_content"
+
+            <com.rey.material.widget.EditText
+                android:id="@+id/addressField"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="@string/gender"
-                android:textColor="#000000"/>
-            <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="70"
+                android:hint="@string/adressField"
+                android:inputType="textMultiLine"
+                app:et_inputId="@+id/textfield_et_char_counter_input"
+                app:et_supportMaxChars="70"
+                app:et_supportMode="charCounter" />
+
+            <com.rey.material.widget.EditText
+                android:id="@+id/zipCodeField"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="7">
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-
-                    <com.rey.material.widget.RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioMale"
-                        android:checked="true"
-                        android:gravity="center"
-                        android:text="@string/radio_male"
-                        style="@style/Material.Drawable.RadioButton"/>
-
-                    <com.rey.material.widget.RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioFemale"
-                        android:text="@string/radio_female"
-                        android:gravity="center"
-                        style="@style/Material.Drawable.RadioButton"/>
-
-                </RadioGroup>
-
-            </RelativeLayout>
-
-
-
+                android:layout_marginTop="8dp"
+                android:layout_weight="30"
+                android:hint="@string/zipCodeField"
+                android:inputType="number"
+                app:et_inputId="@+id/textfield_et_char_counter_input"
+                app:et_supportMaxChars="7"
+                app:et_supportMode="charCounter" />
         </LinearLayout>
 
-        <com.rey.material.widget.EditText
-            android:id="@+id/addressField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:inputType="textMultiLine"
-            android:hint="@string/adressField"
-            app:et_inputId="@+id/textfield_et_char_counter_input"
-            app:et_supportMode="charCounter"
-            app:et_supportMaxChars="70"
-            />
         <com.rey.material.widget.EditText
             android:id="@+id/cityField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:inputType="textMultiLine"
             android:hint="@string/cityField"
-            app:et_inputId="@+id/textfield_et_char_counter_input"
-            app:et_supportMode="charCounter"
-            app:et_supportMaxChars="20"
-            />
-        <com.rey.material.widget.EditText
-            android:id="@+id/zipCodeField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:inputType="textMultiLine"
-            android:hint="@string/zipCodeField"
             app:et_inputId="@+id/textfield_et_char_counter_input"
-            app:et_supportMode="charCounter"
             app:et_supportMaxChars="20"
-            />
+            app:et_supportMode="charCounter" />
 
-        <com.rey.material.widget.EditText
-            android:id="@+id/homePhoneField"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:inputType="textMultiLine"
-            android:hint="@string/homePhoneField"
-            app:et_inputId="@+id/textfield_et_char_counter_input"
-            app:et_supportMode="charCounter"
-            app:et_supportMaxChars="15"
-            />
-        <com.rey.material.widget.EditText
-            android:id="@+id/mobileField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:inputType="textMultiLine"
-            android:hint="@string/mobileField"
-            app:et_inputId="@+id/textfield_et_char_counter_input"
-            app:et_supportMode="charCounter"
-            app:et_supportMaxChars="20"
-            />
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+
+            <com.rey.material.widget.EditText
+                android:id="@+id/homePhoneField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="50"
+                android:hint="@string/homePhoneField"
+                android:inputType="phone"
+                app:et_inputId="@+id/textfield_et_char_counter_input"
+                app:et_supportMaxChars="15"
+                app:et_supportMode="charCounter" />
+
+
+            <com.rey.material.widget.EditText
+                android:id="@+id/mobileField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="50"
+                android:hint="@string/mobileField"
+                android:inputType="phone"
+                app:et_inputId="@+id/textfield_et_char_counter_input"
+                app:et_supportMaxChars="20"
+                app:et_supportMode="charCounter" />
+        </LinearLayout>
+
+
         <com.rey.material.widget.EditText
             android:id="@+id/emailField"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:inputType="textMultiLine"
+
             android:hint="@string/emailField"
+            android:inputType="textEmailAddress"
             app:et_inputId="@+id/textfield_et_char_counter_input"
-            app:et_supportMode="charCounter"
             app:et_supportMaxChars="20"
-            />
+            app:et_supportMode="charCounter" />
+
+
+        <com.rey.material.widget.Spinner
+            android:id="@+id/spinner_blood_type"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:gravity="center">
+
+        </com.rey.material.widget.Spinner>
+
+
+        <com.rey.material.widget.Spinner
+            android:id="@+id/spinner_marital_status"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="30dp">
+
+        </com.rey.material.widget.Spinner>
+
+
+        <com.rey.material.widget.Slider
+            android:id="@+id/slider_weight_status"
+            style="@style/Material.Widget.Slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:sl_discreteMode="true"
+            app:sl_maxValue="250"
+            app:sl_minValue="1"
+            app:sl_stepValue="1"
+            app:sl_thumbBorderSize="60dp"
+            app:sl_trackSize="3dp"
+
+            app:sl_travelAnimDuration="0"
+
+            app:sl_value="50" />
+
+        <com.rey.material.widget.Slider
+            android:id="@+id/slider_height_status"
+            style="@style/Material.Widget.Slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:sl_discreteMode="true"
+            app:sl_maxValue="300"
+            app:sl_minValue="15"
+            app:sl_trackSize="3dp"
+            app:sl_travelAnimDuration="0"
+            app:sl_value="150" />
+
+        <com.rey.material.widget.Button
+            android:id="@+id/mapsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/i_have_finished" />
 
 
     </LinearLayout>
