@@ -32,6 +32,15 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Map"
                   />
+        <activity android:name=".FA"
+                  android:label="Primeros Auxilios"
+            />
+        <activity android:name=".ProfileActivity"
+                  android:label="Información"
+            />
+        <activity android:name=".FAInfo"
+                  android:label="Primeros Auxilios"
+            />
     </application>
 
 </manifest>

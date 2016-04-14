@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class SQLHelper extends SQLiteOpenHelper {
 
     public static String DATABASE_NAME = "data.db";
-    private static final int DATABASE_VERSION = 5;
+    private static final int DATABASE_VERSION = 6;
     private static ArrayList<String> databasesCollection;
 
     public SQLHelper(Context context) {
@@ -31,7 +31,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE IF NOT EXISTS " + InCaseOfEmergencyDBSchema.InCaseOfEmergencyTable.NAME + " (" + InCaseOfEmergencyDBSchema.InCaseOfEmergencyTable.Cols.getCreateQueryCols() + ")");
 
 
-        Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'Tbl%'", null);
+        /*Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'Tbl%'", null);
 
         if (c.moveToFirst()) {
             while (!c.isAfterLast()) {
@@ -39,7 +39,7 @@ public class SQLHelper extends SQLiteOpenHelper {
                 databasesCollection.add(c.getString(0));
                 c.moveToNext();
             }
-        }
+        }*/
 
 
     }
@@ -56,7 +56,16 @@ public class SQLHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
 
-        Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'Tbl%'", null);
+        boolean res = false;
+        Cursor cursor = db.rawQuery("SELECT * FROM "+PersonalInfoDBSchema.UserDataTable.NAME, null);
+        if(cursor.getCount() == 0){
+            res = false;
+        }
+        if(cursor.getCount() > 0){
+            res = true;
+        }
+        return res;
+        /*Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'Tbl%'", null);
 
         if (c.moveToFirst()) {
             while (!c.isAfterLast()) {
@@ -67,7 +76,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         }
 
 
-        return !(c.getCount() == 0);
+        return !(c.getCount() == 0);*/
 
     }
 
@@ -77,7 +86,8 @@ public class SQLHelper extends SQLiteOpenHelper {
         long res = -1;
         switch (table) {
             case PersonalInfoDBSchema.UserDataTable.NAME:
-                if (data.length == 10) {
+                //if (data.length == 10) {
+                if (data.length == 4){
                     for (int i = 0; i < PersonalInfoDBSchema.UserDataTable.Cols.COL.length; i++) {
                         contentValues.put(PersonalInfoDBSchema.UserDataTable.Cols.COL[i], data[i]);
                     }
@@ -93,5 +103,44 @@ public class SQLHelper extends SQLiteOpenHelper {
         } else {
             return true;
         }
+    }
+
+    public boolean updateData(String table, String where, String[] data){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        long res = -1;
+        switch (table) {
+            case PersonalInfoDBSchema.UserDataTable.NAME:
+                //if (data.length == 10) {
+                if (data.length == 4){
+                    for (int i = 0; i < PersonalInfoDBSchema.UserDataTable.Cols.COL.length; i++) {
+                        contentValues.put(PersonalInfoDBSchema.UserDataTable.Cols.COL[i], data[i]);
+                    }
+                    res = db.update(PersonalInfoDBSchema.UserDataTable.NAME, contentValues, "name = ?", new String[] {where});
+                } else {
+                    System.out.println("Error");
+                }
+                break;
+
+        }
+        if (res == -1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public Cursor getData(String table){
+        SQLiteDatabase db  = getWritableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM "+table, null);
+        /*String [] data = {""};
+        if (c.moveToFirst()) {
+            while (!c.isAfterLast()) {
+                data[c.getCount()] = c.getString(c.getCount());
+
+                c.moveToNext();
+            }
+        }*/
+        return c;
     }
 }

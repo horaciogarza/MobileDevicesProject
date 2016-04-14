@@ -27,7 +27,9 @@ public class PersonalInfoDBSchema {
             public static final String HEIGHT = "height";
             public static final String BIRTHDAY = "birthday";
 
-            public static final String[] COL = {"name", "address", "bloodType", "city",  "email", "zipCode", "mobile", "homePhone", "maritalStatus", "birthday"};
+            //public static final String[] COL = {"name", "address", "bloodType", "city",  "email", "zipCode", "mobile", "homePhone", "maritalStatus", "birthday"};
+
+            public static final String[] COL = {"name", "age", "bloodType", "addInfo"};
 
             public static String getCreateQueryCols() {
                 String query = "";

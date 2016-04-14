@@ -21,15 +21,19 @@ package com.example.publicfinalsdevs.firstaid;
  * 4. BE CAREFUL WITH THE GRADLE AND MAVEN!
  **/
 
-import android.content.Context;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import database.SQLHelper;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements  View.OnClickListener{
 
     private SQLHelper mDatabase;
 
@@ -44,16 +48,89 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mDatabase = new SQLHelper(this);
 
-        startActivity(new Intent(MainActivity.this, MapsActivity.class));
+        //startActivity(new Intent(MainActivity.this, MapsActivity.class));
 
-//        if(mDatabase.isUserInfo()) {
-//            Log.i("Database Status", "Database  exists");
-//        }else {
-//            startActivity(new Intent(MainActivity.this, StartUp.class));
-//            finish();
-//
-//        }
+        if(mDatabase.isUserInfo()) {
+            Log.i("Database Status", "Database  exists");
+        }else {
+            Intent intent = new Intent(MainActivity.this, StartUp.class);
+            intent.putExtra("edit", false);
+            startActivity(intent);
+            finish();
+        }
+
+        //---Declaracion y Asociasion de botones con XML
+        Button btn_mapa;   btn_mapa = (Button) findViewById(R.id.btnmap);
+        Button btn_user;   btn_user = (Button) findViewById(R.id.btnperfil);
+        Button btn_SOS;    btn_SOS = (Button) findViewById(R.id.btnSOS);
+        Button btn_contactos;   btn_contactos = (Button) findViewById(R.id.btncontactos);
+        Button btn_fa;  btn_fa = (Button) findViewById(R.id.btnfa);
+        btn_contactos.setOnClickListener(this);
+        btn_mapa.setOnClickListener(this);
+        btn_user.setOnClickListener(this);
+        btn_SOS.setOnClickListener(this);
+
+        btn_SOS.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(MainActivity.this, "Hola", Toast.LENGTH_LONG).show();
+                alertMessage();
+                return true;
+            }
+        });
+        btn_fa.setOnClickListener(this);
 
 
+
+
+    }
+
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btncontactos:
+
+                break;
+            case R.id.btnperfil:
+                Intent perfil = new Intent(MainActivity.this,ProfileActivity.class);
+                startActivity(perfil);
+                break;
+
+            case R.id.btnmap:
+                Intent mapa = new Intent(MainActivity.this,MapsActivity.class);
+                startActivity(mapa);
+
+                break;
+            case R.id.btnSOS:
+                Toast.makeText(MainActivity.this, "Deje Presionado", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnfa:
+                Intent fa = new Intent(MainActivity.this, FA.class);
+                startActivity(fa);
+                break;
+
+
+        }
+    }
+
+    public boolean alertMessage(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle("Llamada de Emergencia");
+        builder.setMessage("HOla");
+        builder.setNegativeButton("No llamar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.setPositiveButton("Llamar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.show();
+
+        return true;
     }
 }
