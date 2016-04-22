@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">firstAid</string>
+    <string name="mapAppName">Maps</string>
+    <string name="emergencyAppName">Emergency Numbers</string>
+    <string name="title_activity_personal_data_form">PersonalDataForm</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="nameField">Name</string>
+    <string name="nameOnForm">Nombre</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="gender">Gender:</string>
+    <string name="adressField">Adress</string>
+    <string name="cityField">City</string>
+    <string name="zipCodeField">Zip Code</string>
+    <string name="homePhoneField">Local Phone</string>
+    <string name="emailField">Email</string>
+    <string name="mobileField">Mobile</string>
+
+    <!--Emergency Phone Names-->
+    <string name="epn_ambulance">Ambulance</string>
+    <string name="epn_police">Police</string>
+    <string name="epn_civil">Animal Protection</string>
+    <string name="epn_firemen">Firemen</string>
+    <string name="epn_oneNineNine">911</string>
+    <string name="epn_firstAid">First Aid</string>
+</resources>

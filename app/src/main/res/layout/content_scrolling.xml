@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.publicfinalsdevs.firstaid.ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--Form-->
+        <com.rey.material.widget.EditText
+            android:id="@+id/nameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/nameField"
+            app:et_inputId="@+id/textfield_et_char_counter_input"
+            app:et_supportMode="charCounter"
+            app:et_supportMaxChars="20"
+            app:et_dividerColor="#000000"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/gender"
+                android:textColor="#000000"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <com.rey.material.widget.RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioMale"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/radio_male"
+                        style="@style/Material.Drawable.RadioButton"/>
+
+                    <com.rey.material.widget.RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioFemale"
+                        android:text="@string/radio_female"
+                        android:gravity="center"
+                        style="@style/Material.Drawable.RadioButton"/>
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/addressField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/adressField"
+            app:et_inputId="@+id/textfield_et_char_counter_input"
+            app:et_supportMode="charCounter"
+            app:et_supportMaxChars="70"
+            />
+        <com.rey.material.widget.EditText
+            android:id="@+id/cityField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/cityField"
+            app:et_inputId="@+id/textfield_et_char_counter_input"
+            app:et_supportMode="charCounter"
+            app:et_supportMaxChars="20"
+            />
+        <com.rey.material.widget.EditText
+            android:id="@+id/zipCodeField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/zipCodeField"
+            app:et_inputId="@+id/textfield_et_char_counter_input"
+            app:et_supportMode="charCounter"
+            app:et_supportMaxChars="20"
+            />
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/homePhoneField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/homePhoneField"
+            app:et_inputId="@+id/textfield_et_char_counter_input"
+            app:et_supportMode="charCounter"
+            app:et_supportMaxChars="15"
+            />
+        <com.rey.material.widget.EditText
+            android:id="@+id/mobileField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/mobileField"
+            app:et_inputId="@+id/textfield_et_char_counter_input"
+            app:et_supportMode="charCounter"
+            app:et_supportMaxChars="20"
+            />
+        <com.rey.material.widget.EditText
+            android:id="@+id/emailField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/emailField"
+            app:et_inputId="@+id/textfield_et_char_counter_input"
+            app:et_supportMode="charCounter"
+            app:et_supportMaxChars="20"
+            />
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

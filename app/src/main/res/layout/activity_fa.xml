@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              tools:context=".FA">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="12dp"
+            android:id="@+id/btnquemadura"
+            android:text="Quemadura"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/quemadura"
+            android:paddingTop="0dp" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="12dp"
+            android:id="@+id/btnfractura"
+            android:text="Fractura"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/fractura"
+            android:paddingTop="0dp" />
+
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="11dp"
+            android:id="@+id/btnveneno"
+            android:text="Veneno"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/veneno"
+            android:paddingTop="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="12dp"
+            android:id="@+id/btnsangrado"
+            android:text="Sangrado"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/sangrado"
+            android:paddingTop="0dp" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="12dp"
+            android:id="@+id/btnmordedura"
+            android:text="Morderura"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/mordedura"
+            android:paddingTop="0dp" />
+
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="12dp"
+            android:id="@+id/btnInconsciente"
+            android:text="Inconciente"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/incon"
+            android:paddingTop="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="12dp"
+            android:id="@+id/btnasfixia"
+            android:text="Asfixia"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/asf"
+            android:paddingTop="0dp" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="12dp"
+            android:id="@+id/btnepilepsia"
+            android:text="Epilepsia"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/epi"
+            android:paddingTop="0dp" />
+
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="12dp"
+            android:id="@+id/btninfarto"
+            android:text="Infarto"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/infarto"
+            android:paddingTop="0dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="12dp"
+            android:id="@+id/btnesguince"
+            android:text="Esguince"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/esguince"
+            android:paddingTop="0dp" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="12dp"
+            android:id="@+id/btn"
+            android:text="Asma"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/asma"
+            android:paddingTop="0dp" />
+
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#00efde48"
+            android:textSize="12dp"
+            android:id="@+id/btncalor"
+            android:text="Calor"
+            android:textColor="#000000"
+            android:drawableTop="@drawable/calor"
+            android:paddingTop="0dp" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
