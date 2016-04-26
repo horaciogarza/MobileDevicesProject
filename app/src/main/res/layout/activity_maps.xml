@@ -5,7 +5,8 @@
                                                  android:layout_width="match_parent"
                                                  android:layout_height="match_parent"
                                                  android:fitsSystemWindows="true"
-                                                 tools:context="com.example.publicfinalsdevs.firstaid.MapsActivity">
+                                                 tools:context="com.example.publicfinalsdevs.firstaid.MapsActivity"
+                                                 android:id="@+id/screen">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -41,6 +42,16 @@
         android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_menu_mylocation"
         app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@android:dimen/app_icon_size"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_anchor="@id/screen"
         app:layout_anchorGravity="bottom|end" />
 
 </android.support.design.widget.CoordinatorLayout>
