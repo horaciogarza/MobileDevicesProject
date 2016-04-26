@@ -24,7 +24,6 @@ package com.example.publicfinalsdevs.firstaid;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -61,9 +60,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         }
 
         //---Declaracion y Asociasion de botones con XML
-        Button btn_mapa;
-        btn_mapa = (Button) findViewById(R.id.btnmap);
-
+        Button btn_mapa;   btn_mapa = (Button) findViewById(R.id.btnmap);
         Button btn_user;   btn_user = (Button) findViewById(R.id.btnperfil);
         Button btn_SOS;    btn_SOS = (Button) findViewById(R.id.btnSOS);
         Button btn_contactos;   btn_contactos = (Button) findViewById(R.id.btncontactos);
@@ -75,7 +72,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         btn_user.setOnClickListener(this);
         btn_SOS.setOnClickListener(this);
         btn_emergencyNum.setOnClickListener(this);
-
 
         btn_SOS.setOnLongClickListener(new View.OnLongClickListener() {
             @Override

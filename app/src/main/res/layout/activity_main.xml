@@ -17,24 +17,24 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <utils.RobotoButton
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#FF59D863"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:id="@+id/btnperfil"
             android:text="Perfil"
             android:textColor="#ffffff"
             android:drawableTop="@drawable/user"
             android:paddingTop="20dp" />
 
-        <utils.RobotoButton
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#9c68d8"
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:id="@+id/btncontactos"
             android:text="Contactos"
             android:textColor="#ffffff"
@@ -50,14 +50,14 @@
         android:weightSum="2">
 
 
-        <utils.RobotoButton
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#c44039"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:id="@+id/btnSOS"
             android:text="Emergencia"
             android:textColor="#ffffff"
@@ -80,28 +80,28 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <utils.RobotoButton
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#3ebec9"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:id="@+id/btnmap"
             android:text="Mapa"
             android:textColor="#ffffff"
             android:drawableTop="@drawable/mapa90" />
 
 
-        <utils.RobotoButton
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#e47501"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:id="@+id/btnfa"
             android:text="Primeros Auxilios"
             android:textColor="#ffffff"
