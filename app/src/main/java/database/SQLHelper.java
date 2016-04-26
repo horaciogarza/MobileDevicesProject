@@ -8,7 +8,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.List;
+=======
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 
 /**
  * Created by diego on 08/02/2016.
@@ -16,7 +19,11 @@ import java.util.List;
 public class SQLHelper extends SQLiteOpenHelper {
 
     public static String DATABASE_NAME = "data.db";
+<<<<<<< HEAD
     private static final int DATABASE_VERSION = 6;
+=======
+    private static final int DATABASE_VERSION = 5;
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
     private static ArrayList<String> databasesCollection;
 
     public SQLHelper(Context context) {
@@ -32,6 +39,18 @@ public class SQLHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE IF NOT EXISTS " + InCaseOfEmergencyDBSchema.InCaseOfEmergencyTable.NAME + " (" + InCaseOfEmergencyDBSchema.InCaseOfEmergencyTable.Cols.getCreateQueryCols() + ")");
 
 
+<<<<<<< HEAD
+=======
+        Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'Tbl%'", null);
+
+        if (c.moveToFirst()) {
+            while (!c.isAfterLast()) {
+                Log.i("TABLE: ", c.getString(0));
+                databasesCollection.add(c.getString(0));
+                c.moveToNext();
+            }
+        }
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 
 
     }
@@ -48,6 +67,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
 
+<<<<<<< HEAD
         boolean res = false;
         Cursor cursor = db.rawQuery("SELECT * FROM "+PersonalInfoDBSchema.UserDataTable.NAME, null);
         if(cursor.getCount() == 0){
@@ -58,6 +78,9 @@ public class SQLHelper extends SQLiteOpenHelper {
         }
         return res;
         /*Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'Tbl%'", null);
+=======
+        Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'Tbl%'", null);
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 
         if (c.moveToFirst()) {
             while (!c.isAfterLast()) {
@@ -68,7 +91,11 @@ public class SQLHelper extends SQLiteOpenHelper {
         }
 
 
+<<<<<<< HEAD
         return !(c.getCount() == 0);*/
+=======
+        return !(c.getCount() == 0);
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 
     }
 
@@ -78,8 +105,12 @@ public class SQLHelper extends SQLiteOpenHelper {
         long res = -1;
         switch (table) {
             case PersonalInfoDBSchema.UserDataTable.NAME:
+<<<<<<< HEAD
                 //if (data.length == 10) {
                 if (data.length == 4){
+=======
+                if (data.length == 10) {
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
                     for (int i = 0; i < PersonalInfoDBSchema.UserDataTable.Cols.COL.length; i++) {
                         contentValues.put(PersonalInfoDBSchema.UserDataTable.Cols.COL[i], data[i]);
                     }
@@ -96,6 +127,7 @@ public class SQLHelper extends SQLiteOpenHelper {
             return true;
         }
     }
+<<<<<<< HEAD
 
     public boolean updateData(String table, String where, String[] data){
         SQLiteDatabase db = getWritableDatabase();
@@ -137,4 +169,6 @@ public class SQLHelper extends SQLiteOpenHelper {
     }
 
 
+=======
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 }

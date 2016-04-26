@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:orientation="vertical"
@@ -21,15 +22,61 @@
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+=======
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
+<<<<<<< HEAD
                     android:id="@+id/nameText"
                     android:hint="Nombre"/>
 
+=======
+                    android:id="@+id/editText"
+                    android:layout_marginTop="29dp"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText2"
+                    android:text="Address"
+                    android:layout_below="@+id/editText"
+                    android:layout_alignStart="@+id/editText"
+                    android:layout_alignEnd="@+id/button"
+                    android:layout_marginTop="29dp"/>
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
             </TableRow>
 
             <TableRow
@@ -39,8 +86,14 @@
                 <Spinner
                     android:layout_width="262dp"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:id="@+id/ageSpinner"
                     android:spinnerMode="dialog"/>
+=======
+                    android:id="@+id/spinner"
+                    android:spinnerMode="dialog"
+                    />
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
             </TableRow>
 
             <TableRow
@@ -50,7 +103,26 @@
                 <Spinner
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:id="@+id/bloodTypeSpinner"/>
+=======
+                    android:id="@+id/spinner2"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="217dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText3"
+                    android:text="City"
+                    android:layout_below="@+id/spinner"
+                    android:layout_alignStart="@+id/spinner"
+                    android:layout_alignEnd="@+id/editText"
+                    android:layout_marginTop="29dp"/>
+
             </TableRow>
 
             <TableRow
@@ -59,13 +131,106 @@
 
                 <EditText
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/editText4"
+                    android:text="E-Mail"
+                    android:layout_below="@+id/editText3"
+                    android:layout_alignStart="@+id/editText3"
+                    android:layout_marginTop="29dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:ems="10"
+                    android:id="@+id/editText5"
+                    android:text="Zip Code"
+                    android:layout_below="@+id/editText4"
+                    android:layout_alignStart="@+id/editText4"
+                    android:layout_marginTop="29dp"/>
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+<<<<<<< HEAD
                     android:layout_height="182dp"
                     android:inputType="textMultiLine"
                     android:ems="10"
                     android:id="@+id/extraInfoText"
                     android:hint="Informacion Adicional"/>
+=======
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/editText6"
+                    android:layout_below="@+id/editText5"
+                    android:layout_alignStart="@+id/editText5"
+                    android:text="Mobile"
+                    android:layout_marginTop="29dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/editText7"
+                    android:layout_below="@+id/editText6"
+                    android:layout_alignStart="@+id/editText6"
+                    android:text="HomePhone"
+                    android:layout_marginTop="29dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText8"
+                    android:layout_above="@+id/button"
+                    android:layout_alignStart="@+id/editText7"
+                    android:text="Martial"
+                    android:layout_toStartOf="@+id/button"
+                    android:layout_marginTop="29dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aceptar"
+                    android:id="@+id/button"
+                    android:layout_marginBottom="29dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/editText" />
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
             </TableRow>
 
         </TableLayout>
     </ScrollView>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 </RelativeLayout>

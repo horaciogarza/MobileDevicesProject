@@ -17,6 +17,7 @@
     <string name="homePhoneField">Local Phone</string>
     <string name="emailField">Email</string>
     <string name="mobileField">Mobile</string>
+<<<<<<< HEAD
 
     <!--Emergency Phone Names-->
     <string name="epn_ambulance">Ambulance</string>
@@ -25,4 +26,8 @@
     <string name="epn_firemen">Firemen</string>
     <string name="epn_oneNineNine">911</string>
     <string name="epn_firstAid">First Aid</string>
+=======
+    <string name="i_have_finished">I\'m ready</string>
+    <string name="marital_status_single">Single</string>
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 </resources>
