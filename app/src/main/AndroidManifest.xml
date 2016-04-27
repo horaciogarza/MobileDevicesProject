@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.publicfinalsdevs.firstaid">
 
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+=======
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -10,12 +14,16 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:largeHeap="true">
+        android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDA0t0Q6BplXBJ2VerPcNp3gTWlS1csjcY" />
 
+=======
+        <meta-data android:name="com.google.android.geo.API_KEY"
+                   android:value="AIzaSyDA0t0Q6BplXBJ2VerPcNp3gTWlS1csjcY"/>
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,6 +37,7 @@
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"
+<<<<<<< HEAD
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MapsActivity"
@@ -50,3 +59,14 @@
     </application>
 
 </manifest>
+=======
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".MapsActivity"
+                  android:label="Hospitales"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Map"
+                  />
+    </application>
+
+</manifest>
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a

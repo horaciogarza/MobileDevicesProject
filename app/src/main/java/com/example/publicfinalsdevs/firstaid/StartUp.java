@@ -1,5 +1,6 @@
 package com.example.publicfinalsdevs.firstaid;
 
+<<<<<<< HEAD
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,6 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+=======
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -28,12 +34,18 @@ public class StartUp extends AppCompatActivity{
 
     SQLHelper mDataBase;
 
+<<<<<<< HEAD
     EditText editName,editAddress,editCity, editEmail,editZipCode,editMoblie,editHomePhone,editMartial, editExtraInfo;
     Spinner spinnerTypeBlood, spinnerAge;
     //Button btnSend;
 
     String oldName;
     boolean edit= false;
+=======
+    EditText editName,editAddress,editCity, editEmail,editZipCode,editMoblie,editHomePhone,editMartial;
+    Spinner spinnerTypeBlood, spinnerAge;
+    Button btnSend;
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +53,7 @@ public class StartUp extends AppCompatActivity{
         setContentView(R.layout.start_up);
         mDataBase = new SQLHelper(this);
 
+<<<<<<< HEAD
         editName = (EditText) findViewById(R.id.nameText);
         editExtraInfo = (EditText) findViewById(R.id.extraInfoText);
 
@@ -97,6 +110,9 @@ public class StartUp extends AppCompatActivity{
         }
 
         /*editName = (EditText)findViewById(R.id.editText);
+=======
+        editName = (EditText)findViewById(R.id.editText);
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
         editAddress = (EditText)findViewById(R.id.editText2);
         editCity = (EditText)findViewById(R.id.editText3);
         editEmail = (EditText)findViewById(R.id.editText4);
@@ -119,6 +135,7 @@ public class StartUp extends AppCompatActivity{
         spinnerTypeBlood = (Spinner)findViewById(R.id.spinner2);
 
         //Items on Spinner TypeBlood
+<<<<<<< HEAD
         List<String> typeBlood = new ArrayList<String>();
         typeBlood.add("AB+");typeBlood.add("AB-");
         typeBlood.add("A+");typeBlood.add("A-");
@@ -128,6 +145,9 @@ public class StartUp extends AppCompatActivity{
         ArrayAdapter<String> adapterTypeBlood = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,typeBlood);
         adapterTypeBlood.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerTypeBlood.setAdapter(adapterTypeBlood);
+=======
+
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 
         btnSend = (Button) findViewById(R.id.button);
         addData();
@@ -152,6 +172,7 @@ public class StartUp extends AppCompatActivity{
                         }
                     }
                 }
+<<<<<<< HEAD
         );*/
 
     }
@@ -271,4 +292,8 @@ public class StartUp extends AppCompatActivity{
 
         return true;
     }
+=======
+        );
+    }
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
 }

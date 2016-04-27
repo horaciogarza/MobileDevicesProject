@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
@@ -17,24 +18,24 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <utils.RobotoButton
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#FF59D863"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:id="@+id/btnperfil"
             android:text="Perfil"
             android:textColor="#ffffff"
             android:drawableTop="@drawable/user"
             android:paddingTop="20dp" />
 
-        <utils.RobotoButton
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#9c68d8"
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:id="@+id/btncontactos"
             android:text="Contactos"
             android:textColor="#ffffff"
@@ -50,14 +51,14 @@
         android:weightSum="2">
 
 
-        <utils.RobotoButton
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#c44039"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:id="@+id/btnSOS"
             android:text="Emergencia"
             android:textColor="#ffffff"
@@ -80,28 +81,28 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <utils.RobotoButton
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#3ebec9"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:id="@+id/btnmap"
             android:text="Mapa"
             android:textColor="#ffffff"
             android:drawableTop="@drawable/mapa90" />
 
 
-        <utils.RobotoButton
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#e47501"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:id="@+id/btnfa"
             android:text="Primeros Auxilios"
             android:textColor="#ffffff"
@@ -111,3 +112,79 @@
 
 </LinearLayout>
 
+=======
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.publicfinalsdevs.firstaid.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <!--Map layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@color/green">
+            <!--@drawable/map_background-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="@string/mapAppName"
+                android:textSize="60sp"/>
+
+        </LinearLayout>
+
+        <!--Button layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:orientation="horizontal">
+            <!--android:background = @drawable/emergency_background-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:text="@string/emergencyAppName"
+                android:textSize="60sp"/>
+
+        </LinearLayout>
+
+        <!--Phone layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="MAPS"
+                android:textSize="60sp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</RelativeLayout>
+>>>>>>> f9bf67acfff3fa6803241a5981bb6ba326a1695a
