@@ -98,6 +98,7 @@ public class MapsActivity extends AppCompatActivity {
 
     private void getDataBase(){
         places.clear();
+
         Cursor c =mDataBase.getData(PlacesDBSchema.PlacesDataTable.NAME);
         if(c.getCount() == 0){
             //Message No data
@@ -127,8 +128,6 @@ public class MapsActivity extends AppCompatActivity {
                 "Bioanalisis S.A.", "25.62200129999999", "-100.2870768"));
         places.add(new Places("ChIJUUgAOQy_YoYRWhNLTxgRLKM", "Lázaro Cárdenas 2660, Mirador Recidencial, Monterrey",
                 "Bioanalisis S.A.", "25.62200129999999", "-100.2870768"));*/
-
-
 
 
         String[] lNames = new String[places.size()];
@@ -255,7 +254,7 @@ public class MapsActivity extends AppCompatActivity {
             //txtTitle.setText(itemName[position]);
             txtTitle.setText(places.get(position).getName());
             //Icon
-            imageButton.setImageResource(R.drawable.common_ic_googleplayservices);
+            imageButton.setImageResource(R.drawable.ic_navigation_black_48dp);
             imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

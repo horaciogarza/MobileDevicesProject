@@ -1,71 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
-                tools:context=".StartUp">
+              android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true">
-
-        <TableLayout
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TableRow
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nameText"
+                android:hint="Nombre"/>
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Edad:"
+                android:textSize="20dp"/>
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/nameText"
-                    android:hint="Nombre"/>
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ageSpinner"
+                android:spinnerMode="dialog"/>
 
-            </TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Tipo de Sangre:"
+                android:textSize="20dp"/>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bloodTypeSpinner"/>
 
-                <Spinner
-                    android:layout_width="262dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ageSpinner"
-                    android:spinnerMode="dialog"/>
-            </TableRow>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="182dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/extraInfoText"
+                android:hint="Informacion Adicional"/>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Spinner
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/bloodTypeSpinner"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="182dp"
-                    android:inputType="textMultiLine"
-                    android:ems="10"
-                    android:id="@+id/extraInfoText"
-                    android:hint="Informacion Adicional"/>
-            </TableRow>
-
-        </TableLayout>
+        </LinearLayout>
     </ScrollView>
-</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StartUp" android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nameText"
+                android:hint="Nombre"/>
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ageSpinner"
+                android:spinnerMode="dialog"/>
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bloodTypeSpinner"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="182dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/extraInfoText"
+                android:hint="Informacion Adicional"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

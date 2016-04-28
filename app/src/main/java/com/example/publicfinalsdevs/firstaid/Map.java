@@ -1,12 +1,17 @@
 package com.example.publicfinalsdevs.firstaid;
 
 import android.Manifest;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -52,16 +57,46 @@ public class Map extends FragmentActivity implements OnMapReadyCallback,
     static LatLng lastLatLng;
     static boolean searchfinish = false;
     public Bundle data;
+    ProgressDialog dialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map);
+        JSONTask.message = null;
         buildGoogleApiClient();
         data = getIntent().getExtras();
+        dialog = ProgressDialog.show(this, "Cargando", "Porfavor Espere", true);
+        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 
         mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
 
+    }
+
+    public void doPositiveClick(char type) {
+        // Do stuff here.
+        switch (type) {
+            case '1':
+                break;
+            case '2':
+                finish();
+                break;
+        }
+        Log.i("FragmentAlertDialog", "Positive click!");
+    }
+
+    public void doNegativeClick() {
+        // Do stuff here.
+        Log.i("FragmentAlertDialog", "Negative click!");
+    }
+
+    public boolean alertMessage(String title, String message){
+        char t =message.charAt(0);
+        message = message.substring(1);
+        DialogFragment newFragment = MyAlertDialogFragment.newInstance(title, message, t);
+        newFragment.show(getFragmentManager(), "dialog");
+
+        return true;
     }
 
     @Override
@@ -86,12 +121,16 @@ public class Map extends FragmentActivity implements OnMapReadyCallback,
                     map.moveCamera(CameraUpdateFactory.newLatLngZoom(lastLatLng, 15));
                 }
                 searchPlaces();
+                boolean mes = false;
                 while (!searchfinish){
-                    //Animacion de Espera
+                    //Espera
                 }
                 if(JSONTask.message != null){
-                    Toast.makeText(Map.this, JSONTask.message, Toast.LENGTH_SHORT);
+                    String message = JSONTask.message;
+                    alertMessage("Error", message);
+                    dialog.dismiss();
                 }
+                dialog.dismiss();
                 for(int i=0; JSONTask.placesArrayList.size()>i;i++){
                     String lat = JSONTask.placesArrayList.get(i).getLat();
                     Double latD = Double.parseDouble(lat);
@@ -120,6 +159,7 @@ public class Map extends FragmentActivity implements OnMapReadyCallback,
                                 lngD))
                         .title(data.getString("name"))
                         .snippet(data.getString("address")));
+                dialog.dismiss();
                 break;
             default:
 
@@ -226,8 +266,6 @@ class JSONTask extends AsyncTask<String, String, String> {
             input = connection.getInputStream();
             reader = new BufferedReader(new InputStreamReader(input));
 
-            System.out.println("Paso 2");
-
             String line = "";
             while((line = reader.readLine()) != null){
                 stringBuffer.append(line);
@@ -253,14 +291,12 @@ class JSONTask extends AsyncTask<String, String, String> {
                 String name = resultsObject.getString("name");
                 String address = resultsObject.getString("vicinity");
                 com.example.publicfinalsdevs.firstaid.Places p = new com.example.publicfinalsdevs.firstaid.Places(placeId,address,name,lat,lng);
-
-                System.out.println(p.toString());
                 placesArrayList.add(i, p);
             }
             }else {
                 switch (resObjectStats) {
                     case "ZERO_RESULTS":
-                        message = "No hay hospitales cercanos";
+                        message = "1No hay hospitales cercanos";
                         break;
                 }
             }
@@ -271,10 +307,19 @@ class JSONTask extends AsyncTask<String, String, String> {
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
+            message = "2"+e;
+            Map.searchfinish = true;
+            return message;
         } catch (IOException e) {
             e.printStackTrace();
+            message = "2"+e;
+            Map.searchfinish = true;
+            return message;
         } catch (JSONException e) {
             e.printStackTrace();
+            message = "2"+e;
+            Map.searchfinish = true;
+            return message;
         } finally {
             if(connection != null) {
                 connection.disconnect();
@@ -285,9 +330,10 @@ class JSONTask extends AsyncTask<String, String, String> {
                 }
             } catch (IOException e) {
                 e.printStackTrace();
+                message = "2"+e;
+                return message;
             }
         }
-        return null;
     }
 
     @Override
@@ -295,3 +341,44 @@ class JSONTask extends AsyncTask<String, String, String> {
         super.onPostExecute(s);
     }
 }
+
+class MyAlertDialogFragment extends DialogFragment {
+
+    public static MyAlertDialogFragment newInstance(String title, String message, char type) {
+        MyAlertDialogFragment frag = new MyAlertDialogFragment();
+        Bundle args = new Bundle();
+        args.putString("title", title);
+        args.putString("message", message);
+        args.putChar("type", type);
+        frag.setArguments(args);
+        return frag;
+    }
+
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        String title = getArguments().getString("title");
+        String message = getArguments().getString("message");
+        final char type = getArguments().getChar("type");
+
+        return new AlertDialog.Builder(getActivity())
+                .setIcon(R.drawable.ic_error_black_48dp)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("Aceptar",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                ((Map) getActivity()).doPositiveClick(type);
+                            }
+                        }
+                )
+                /*.setNegativeButton("R.string.alert_dialog_cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                ((Map)getActivity()).doNegativeClick();
+                            }
+                        }
+                )*/
+                .create();
+    }
+}
+

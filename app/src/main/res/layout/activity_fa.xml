@@ -179,7 +179,7 @@
             android:layout_height="match_parent"
             android:background="#00efde48"
             android:textSize="12dp"
-            android:id="@+id/btn"
+            android:id="@+id/btnAsma"
             android:text="Asma"
             android:textColor="#000000"
             android:drawableTop="@drawable/asma"

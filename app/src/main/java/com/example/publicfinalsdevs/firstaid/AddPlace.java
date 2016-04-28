@@ -2,6 +2,7 @@ package com.example.publicfinalsdevs.firstaid;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.Spanned;
@@ -124,14 +126,19 @@ public class AddPlace extends FragmentActivity
         // Set up the adapter that will retrieve suggestions from the Places Geo Data API that cover
         // the entire world.
 
+
+
         //Filtro
         AutocompleteFilter.Builder filter = new AutocompleteFilter.Builder();
         //2 = FILTER_ADDRESS, 47 = FILTER_HEALTH, 50 = FILTER_HOSPITAL
         filter.setTypeFilter(2).setTypeFilter(47).setTypeFilter(50);
         AutocompleteFilter finalFilter = filter.build();
 
+
+
         mAdapter = new PlaceAutocompleteAdapter(this, mGoogleApiClient, rango,
                 finalFilter);
+        System.out.println(mAdapter.toString());
         mAutocompleteView.setAdapter(mAdapter);
 
         // Set up the 'clear text' button that clears the text in the autocomplete view
@@ -320,6 +327,15 @@ public class AddPlace extends FragmentActivity
         Toast.makeText(this,
                 "Could not connect to Google API Client: Error " + connectionResult.getErrorCode(),
                 Toast.LENGTH_SHORT).show();
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Error");
+        alert.setMessage("Error en conexion con Google./nError:" + connectionResult.getErrorMessage());
+        alert.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
     }
 }
 
