@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_menu_mylocation"
+        android:src="@drawable/ic_my_location_white_48dp"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end" />
 
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="@android:dimen/app_icon_size"
-        android:src="@android:drawable/ic_input_add"
+        android:src="@drawable/ic_add_white_48dp"
         app:layout_anchor="@id/screen"
         app:layout_anchorGravity="bottom|end" />
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">firstAid</string>
+    <string name="app_name">iCare</string>
     <string name="mapAppName">Maps</string>
     <string name="emergencyAppName">Emergency Numbers</string>
     <string name="title_activity_personal_data_form">PersonalDataForm</string>

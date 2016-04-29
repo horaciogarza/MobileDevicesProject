@@ -17,28 +17,29 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <Button
+        <utils.RobotoButton
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#FF59D863"
-            android:textSize="30dp"
+            android:textSize="23dp"
             android:id="@+id/btnperfil"
             android:text="Perfil"
             android:textColor="#ffffff"
-            android:drawableTop="@drawable/user"
-            android:paddingTop="20dp" />
+            android:drawableTop="@drawable/identification_card"
+            android:paddingTop="20dp"
+            />
 
-        <Button
+        <utils.RobotoButton
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#9c68d8"
-            android:textSize="25dp"
+            android:textSize="23dp"
             android:id="@+id/btncontactos"
             android:text="Contactos"
             android:textColor="#ffffff"
-            android:drawableTop="@drawable/contactos"
+            android:drawableTop="@drawable/main_contacts"
             android:paddingTop="20dp" />
     </LinearLayout>
 
@@ -46,23 +47,41 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:weightSum="2">
 
 
-        <Button
+        <utils.RobotoButton
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#c44039"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textSize="25dp"
+            android:textSize="23dp"
             android:id="@+id/btnSOS"
             android:text="Emergencia"
             android:textColor="#ffffff"
-            android:drawableTop="@drawable/emergency"
+            android:drawableTop="@drawable/emergency_button"
             android:layout_gravity="top" android:gravity="center" />
 
+        <utils.RobotoButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#3b5998"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="23dp"
+            android:id="@+id/btnPhones"
+            android:text="Telefonos de emergencia"
+            android:onClick="onClick"
+            android:textColor="#ffffff"
+            android:drawableTop="@drawable/phones_icon"
+            android:layout_gravity="top"
+            android:gravity="center"
+
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -71,21 +90,21 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <Button
+        <utils.RobotoButton
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="#3ebec9"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textSize="30dp"
+            android:textSize="23dp"
             android:id="@+id/btnmap"
-            android:text="Mapa"
+            android:text="Mis Hospitales"
             android:textColor="#ffffff"
-            android:drawableTop="@drawable/mapa90" />
+            android:drawableTop="@drawable/hospital_clinic" />
 
 
-        <Button
+        <utils.RobotoButton
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -96,7 +115,7 @@
             android:id="@+id/btnfa"
             android:text="Primeros Auxilios"
             android:textColor="#ffffff"
-            android:drawableTop="@drawable/firstaid"
+            android:drawableTop="@drawable/firstaidit"
             android:layout_gravity="top" />
     </LinearLayout>
 
