@@ -2,24 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+                android:background="@drawable/apng">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView"
-        android:src="@drawable/u"
+        android:src="@drawable/user_image"
+        android:layout_marginTop="25dp"
+
         android:layout_gravity="center_horizontal"/>
 
-    <TextView
+    <utils.RobotoTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Nombre"
+        android:text="Nombre:"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal"/>
 
-    <TextView
+    <utils.RobotoTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -27,15 +32,17 @@
         android:id="@+id/nombreText"
         android:layout_gravity="center_horizontal"/>
 
-    <TextView
+    <utils.RobotoTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Edad"
+        android:text="Edad:"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
         android:id="@+id/textView3"
         android:layout_gravity="center_horizontal"/>
 
-    <TextView
+    <utils.RobotoTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -43,15 +50,17 @@
         android:id="@+id/edadText"
         android:layout_gravity="center_horizontal"/>
 
-    <TextView
+    <utils.RobotoTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Tipo de Sangre"
+        android:text="Tipo de Sangre:"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
         android:id="@+id/textView5"
         android:layout_gravity="center_horizontal"/>
 
-    <TextView
+    <utils.RobotoTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -59,15 +68,17 @@
         android:id="@+id/bloodTypeText"
         android:layout_gravity="center_horizontal"/>
 
-    <TextView
+    <utils.RobotoTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Informacion adicional"
+        android:text="Informacion adicional:"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
         android:id="@+id/textView7"
         android:layout_gravity="center_horizontal"/>
 
-    <TextView
+    <utils.RobotoTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"

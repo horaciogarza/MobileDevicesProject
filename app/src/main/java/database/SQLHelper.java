@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 /**
@@ -29,6 +30,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE IF NOT EXISTS " + EmergencyPhoneNumDBSchema.EmergencyPhoneNumTable.NAME + " (" + EmergencyPhoneNumDBSchema.EmergencyPhoneNumTable.Cols.getCreateQueryCols() + ")");
         db.execSQL("CREATE TABLE IF NOT EXISTS " + MedicalDataDBSchema.MedicalDataTable.NAME + " (" + MedicalDataDBSchema.MedicalDataTable.Cols.getCreateQueryCols() + ")");
         db.execSQL("CREATE TABLE IF NOT EXISTS " + InCaseOfEmergencyDBSchema.InCaseOfEmergencyTable.NAME + " (" + InCaseOfEmergencyDBSchema.InCaseOfEmergencyTable.Cols.getCreateQueryCols() + ")");
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + PlacesDBSchema.PlacesDataTable.NAME + " (" + PlacesDBSchema.PlacesDataTable.Cols.getCreateQueryCols() + ")");
 
 
         /*Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'Tbl%'", null);
@@ -96,7 +98,16 @@ public class SQLHelper extends SQLiteOpenHelper {
                     System.out.println("Error");
                 }
                 break;
-
+            case PlacesDBSchema.PlacesDataTable.NAME:
+                if (data.length == 5){
+                    for(int i=1; i < PlacesDBSchema.PlacesDataTable.Cols.COL.length; i++){
+                        contentValues.put(PlacesDBSchema.PlacesDataTable.Cols.COL[i], data [i-1]);
+                    }
+                    res = db.insert(PlacesDBSchema.PlacesDataTable.NAME, null, contentValues);
+                }else {
+                    System.out.println("Data length Error");
+                }
+                break;
         }
         if (res == -1) {
             return false;
@@ -116,12 +127,11 @@ public class SQLHelper extends SQLiteOpenHelper {
                     for (int i = 0; i < PersonalInfoDBSchema.UserDataTable.Cols.COL.length; i++) {
                         contentValues.put(PersonalInfoDBSchema.UserDataTable.Cols.COL[i], data[i]);
                     }
-                    res = db.update(PersonalInfoDBSchema.UserDataTable.NAME, contentValues, "name = ?", new String[] {where});
+                    res = db.update(PersonalInfoDBSchema.UserDataTable.NAME, contentValues, "name = ?", new String[]{where});
                 } else {
                     System.out.println("Error");
                 }
                 break;
-
         }
         if (res == -1) {
             return false;
@@ -142,5 +152,16 @@ public class SQLHelper extends SQLiteOpenHelper {
             }
         }*/
         return c;
+    }
+
+    public Integer deleteData(String table, String where, String dataWhere){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        long res = -1;
+        switch (table) {
+            case PlacesDBSchema.PlacesDataTable.NAME:
+                return db.delete(table,where+"=?", new String[]{dataWhere});
+        }
+        return 0;
     }
 }

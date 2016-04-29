@@ -12,10 +12,12 @@ import android.widget.Toast;
  */
 public class FA extends AppCompatActivity implements View.OnClickListener{
 
+    Intent intent;
     @Override
      protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fa);
+        intent = new Intent(FA.this, FAInfo.class);
 
         Button btnQuemadura = (Button) findViewById(R.id.btnquemadura);
         btnQuemadura.setOnClickListener(this);
@@ -25,8 +27,10 @@ public class FA extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnquemadura:
-                startActivity(new Intent(FA.this, FAInfo.class));
-                Toast.makeText(FA.this, "Info.class", Toast.LENGTH_SHORT).show();
+                intent.putExtra("title", "Quemaduras");
+                intent.putExtra("icon", R.drawable.quemadura);
+                intent.putExtra("src", "quemaduras.txt");
+                startActivity(intent);
                 break;
         }
     }
