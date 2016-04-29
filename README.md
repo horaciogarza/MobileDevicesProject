@@ -1,4 +1,4 @@
-<h1>First Aid</h1>
+<h1>iCare</h1>
 
 
 First Aid is an Android Application for mobile devices with an Android API 21+, it was made for a Scholar Project. The main purpose is to have an App which tells you what to do in emergency cases. 
