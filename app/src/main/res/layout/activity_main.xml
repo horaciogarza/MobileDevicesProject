@@ -34,41 +34,6 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:background="#9c68d8"
-            android:textSize="23dp"
-            android:id="@+id/btncontactos"
-            android:text="Contactos"
-            android:textColor="#ffffff"
-            android:drawableTop="@drawable/main_contacts"
-            android:paddingTop="20dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:weightSum="2">
-
-
-        <utils.RobotoButton
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:background="#c44039"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:textSize="23dp"
-            android:id="@+id/btnSOS"
-            android:text="Emergencia"
-            android:textColor="#ffffff"
-            android:drawableTop="@drawable/emergency_button"
-            android:layout_gravity="top" android:gravity="center" />
-
-        <utils.RobotoButton
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
             android:background="#3b5998"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -82,6 +47,31 @@
             android:gravity="center"
 
             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2">
+
+
+        <utils.RobotoButton
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="#c44039"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="23dp"
+            android:id="@+id/btnSOS"
+            android:text="Emergencia"
+            android:textColor="#ffffff"
+            android:drawableTop="@drawable/emergency_button"
+            android:layout_gravity="top" android:gravity="center" />
+
+
     </LinearLayout>
 
     <LinearLayout

@@ -78,15 +78,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_user = (Button) findViewById(R.id.btnperfil);
         Button btn_SOS;
         btn_SOS = (Button) findViewById(R.id.btnSOS);
-        Button btn_contactos;
-        btn_contactos = (Button) findViewById(R.id.btncontactos);
+
         Button btn_fa;
         btn_fa = (Button) findViewById(R.id.btnfa);
 
         Button btnPhones = (Button) findViewById(R.id.btnPhones);
 
         btnPhones.setOnClickListener(this);
-        btn_contactos.setOnClickListener(this);
         btn_mapa.setOnClickListener(this);
         btn_user.setOnClickListener(this);
         btn_SOS.setOnClickListener(this);
@@ -162,9 +160,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btncontactos:
-                Toast.makeText(MainActivity.this, "Contactos", Toast.LENGTH_SHORT).show();
-                break;
+
 
             case R.id.btnperfil:
                 Intent perfil = new Intent(MainActivity.this,ProfileActivity.class);
